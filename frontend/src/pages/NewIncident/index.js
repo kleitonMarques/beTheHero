@@ -8,7 +8,7 @@ import api from '../../service/api'
 
 export default function NewIncident() {
     const [title, setTitle] = useState('')
-    const [descrition, setDescription] = useState('')
+    const [description, setDescription] = useState('')
     const [value, setValue] = useState('')
     const history = useHistory()
     const ongId = localStorage.getItem('ongId')
@@ -17,7 +17,7 @@ export default function NewIncident() {
         e.preventDefault()
         const data = {
             title,
-            descrition,
+            description,
             value
         }
 
@@ -48,7 +48,7 @@ export default function NewIncident() {
                 </section>
                 <form onSubmit={handleNewIncident}>
                     <input value={title} onChange={e => setTitle(e.target.value)} placeholder="Título do caso" />
-                    <textarea value={descrition} onChange={e => setDescription(e.target.value)} placeholder="Descrição" />
+                    <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder="Descrição" />
                         <input value={value} onChange={e => setValue(e.target.value)} placeholder="Valor em reais" />
 
                     <button className="button" type="submit">Cadastrar</button>
